@@ -539,6 +539,11 @@ body {
   transform: translate(100%,0);
   opacity: 0
 }
+.top-hero__item._watcher-view {
+  -webkit-transform: translate(0,0);
+  transform: translate(0,0);
+  opacity: 1
+}
 .top-hero__item:not(:last-child) {
   margin-bottom: 1rem
 }
@@ -552,28 +557,19 @@ body {
   background-color: #fff
 }
 .top-hero__item:nth-child(1)._watcher-view {
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0);
-  opacity: 1;
-  transition: scale .3s,opacity .5s 1s,-webkit-transform .5s 1s;
-  transition: scale .3s,transform .5s 1s,opacity .5s 1s;
-  transition: scale .3s,transform .5s 1s,opacity .5s 1s,-webkit-transform .5s 1s
+  transition: scale .3s,opacity .5s,-webkit-transform .5s;
+  transition: scale .3s,transform .5s,opacity .5s;
+  transition: scale .3s,transform .5s,opacity .5s,-webkit-transform .5s
 }
 .top-hero__item:nth-child(2)._watcher-view {
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0);
-  opacity: 1;
-  transition: scale .3s,opacity 1s 1s,-webkit-transform 1s 1s;
-  transition: scale .3s,transform 1s 1s,opacity 1s 1s;
-  transition: scale .3s,transform 1s 1s,opacity 1s 1s,-webkit-transform 1s 1s
+  transition: scale .3s,opacity 1s,-webkit-transform 1s;
+  transition: scale .3s,transform 1s,opacity 1s;
+  transition: scale .3s,transform 1s,opacity 1s,-webkit-transform 1s
 }
 .top-hero__item:nth-child(3)._watcher-view {
-  -webkit-transform: translate(0,0);
-  transform: translate(0,0);
-  opacity: 1;
-  transition: scale .3s,opacity 2s 1s,-webkit-transform 2s 1s;
-  transition: scale .3s,transform 2s 1s,opacity 2s 1s;
-  transition: scale .3s,transform 2s 1s,opacity 2s 1s,-webkit-transform 2s 1s
+  transition: scale .3s,opacity 2s,-webkit-transform 2s;
+  transition: scale .3s,transform 2s,opacity 2s;
+  transition: scale .3s,transform 2s,opacity 2s,-webkit-transform 2s
 }
 .top-hero__link {
   display: flex;
@@ -631,25 +627,25 @@ body {
   transform: translate(-50%,0);
   opacity: 0
 }
-.here__item._watcher-view {
+._watcher-view .here__item {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1
 }
-.here__item:nth-child(1)._watcher-view {
-  transition: opacity 1s 1.5s,-webkit-transform 1s 1.5s;
-  transition: transform 1s 1.5s,opacity 1s 1.5s;
-  transition: transform 1s 1.5s,opacity 1s 1.5s,-webkit-transform 1s 1.5s
+._watcher-view .here__item:nth-child(1) {
+  transition: opacity 1s,-webkit-transform 1s;
+  transition: transform 1s,opacity 1s;
+  transition: transform 1s,opacity 1s,-webkit-transform 1s
 }
-.here__item:nth-child(2)._watcher-view {
-  transition: opacity 1.5s 1.5s,-webkit-transform 1.5s 1.5s;
-  transition: transform 1.5s 1.5s,opacity 1.5s 1.5s;
-  transition: transform 1.5s 1.5s,opacity 1.5s 1.5s,-webkit-transform 1.5s 1.5s
+._watcher-view .here__item:nth-child(2) {
+  transition: opacity 1.5s,-webkit-transform 1.5s;
+  transition: transform 1.5s,opacity 1.5s;
+  transition: transform 1.5s,opacity 1.5s,-webkit-transform 1.5s
 }
-.here__item:nth-child(3)._watcher-view {
-  transition: opacity 2s 1.5s,-webkit-transform 2s 1.5s;
-  transition: transform 2s 1.5s,opacity 2s 1.5s;
-  transition: transform 2s 1.5s,opacity 2s 1.5s,-webkit-transform 2s 1.5s
+._watcher-view .here__item:nth-child(3) {
+  transition: opacity 2s,-webkit-transform 2s;
+  transition: transform 2s,opacity 2s;
+  transition: transform 2s,opacity 2s,-webkit-transform 2s
 }
 .here__pictures {
   position: relative;
@@ -695,9 +691,9 @@ body {
   align-self: center;
   scale: 0
 }
-.pictures-here__main-image._watcher-view {
+._watcher-view .pictures-here__main-image {
   scale: 1;
-  transition: scale 2s 3s,opacity 1s .5s
+  transition: scale 2s 1.5s,opacity 1s 1.5s
 }
 .pictures-here__backgraund-img {
   position: absolute;
@@ -711,9 +707,6 @@ body {
 .deco {
   position: relative;
   z-index: 2;
-  -webkit-transform: translate(50%,0);
-  transform: translate(50%,0);
-  opacity: 0;
   display: inline-flex;
   align-items: center;
   gap: .75rem;
@@ -745,37 +738,46 @@ body {
   color: #ff7500
 }
 .deco--left {
+  -webkit-transform: translate(50%,0);
+  transform: translate(50%,0);
+  opacity: 0;
   margin-bottom: .8125rem
 }
-.deco--left._watcher-view {
+._watcher-view .deco--left {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1;
-  transition: opacity 1s .5s,-webkit-transform 1s .5s;
-  transition: transform 1s .5s,opacity 1s .5s;
-  transition: transform 1s .5s,opacity 1s .5s,-webkit-transform 1s .5s
+  transition: opacity 1s,-webkit-transform 1s;
+  transition: transform 1s,opacity 1s;
+  transition: transform 1s,opacity 1s,-webkit-transform 1s
 }
 .deco--top {
-  justify-self: flex-end
+  justify-self: flex-end;
+  -webkit-transform: translate(0,10%);
+  transform: translate(0,10%);
+  opacity: 0
 }
-.deco--top._watcher-view {
+._watcher-view .deco--top {
   -webkit-transform: translate(0,-50%);
   transform: translate(0,-50%);
   opacity: 1;
-  transition: opacity 2s 1.5s,-webkit-transform 2s 1.5s;
-  transition: transform 2s 1.5s,opacity 2s 1.5s;
-  transition: transform 2s 1.5s,opacity 2s 1.5s,-webkit-transform 2s 1.5s
+  transition: opacity 2s 1s,-webkit-transform 2s 1s;
+  transition: transform 2s 1s,opacity 2s 1s;
+  transition: transform 2s 1s,opacity 2s 1s,-webkit-transform 2s 1s
 }
 .deco--bottom {
-  justify-self: flex-end
+  justify-self: flex-end;
+  -webkit-transform: translate(0,10%);
+  transform: translate(0,10%);
+  opacity: 0
 }
-.deco--bottom._watcher-view {
+._watcher-view .deco--bottom {
   -webkit-transform: translate(0,50%);
   transform: translate(0,50%);
   opacity: 1;
-  transition: opacity 1s 1.5s,-webkit-transform 1s 1.5s;
-  transition: transform 1s 1.5s,opacity 1s 1.5s;
-  transition: transform 1s 1.5s,opacity 1s 1.5s,-webkit-transform 1s 1.5s
+  transition: opacity 1s 1s,-webkit-transform 1s 1s;
+  transition: transform 1s 1s,opacity 1s 1s;
+  transition: transform 1s 1s,opacity 1s 1s,-webkit-transform 1s 1s
 }
 .choice {
   padding-top: 3.125rem;
@@ -813,14 +815,14 @@ body {
 .choice__item:nth-child(2) {
   grid-row: span 2
 }
-.choice__item._watcher-view {
+._watcher-view .choice__item {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1;
   visibility: visible;
-  transition: scale .3s,opacity 1s .3s,-webkit-transform 1s .3s;
-  transition: scale .3s,transform 1s .3s,opacity 1s .3s;
-  transition: scale .3s,transform 1s .3s,opacity 1s .3s,-webkit-transform 1s .3s
+  transition: scale .3s,opacity 1s,-webkit-transform 1s;
+  transition: scale .3s,transform 1s,opacity 1s;
+  transition: scale .3s,transform 1s,opacity 1s,-webkit-transform 1s
 }
 .item-choice {
   display: flex;
@@ -887,13 +889,13 @@ body {
   color: #fff;
   padding-bottom: 1rem
 }
-.about__title._watcher-view {
+._watcher-view .about__title {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1;
-  transition: opacity 1s 1s,-webkit-transform 1s 1s;
-  transition: transform 1s 1s,opacity 1s 1s;
-  transition: transform 1s 1s,opacity 1s 1s,-webkit-transform 1s 1s
+  transition: opacity 1s,-webkit-transform 1s;
+  transition: transform 1s,opacity 1s;
+  transition: transform 1s,opacity 1s,-webkit-transform 1s
 }
 .about__title::before {
   content: "";
@@ -919,26 +921,26 @@ body {
 .about__text p:not(:last-child) {
   margin-bottom: 1rem
 }
-.about__text._watcher-view {
+._watcher-view .about__text {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: .3;
-  transition: opacity 1s 1.2s,-webkit-transform 1s 1.2s;
-  transition: transform 1s 1.2s,opacity 1s 1.2s;
-  transition: transform 1s 1.2s,opacity 1s 1.2s,-webkit-transform 1s 1.2s
+  transition: opacity 1.5s,-webkit-transform 1.5s;
+  transition: transform 1.5s,opacity 1.5s;
+  transition: transform 1.5s,opacity 1.5s,-webkit-transform 1.5s
 }
 .about__button {
   -webkit-transform: translate(-50%,0);
   transform: translate(-50%,0);
   opacity: 0
 }
-.about__button._watcher-view {
+._watcher-view .about__button {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1;
-  transition: opacity 1s 1.6s,-webkit-transform 1s 1.6s;
-  transition: transform 1s 1.6s,opacity 1s 1.6s;
-  transition: transform 1s 1.6s,opacity 1s 1.6s,-webkit-transform 1s 1.6s
+  transition: opacity 1s,-webkit-transform 1s;
+  transition: transform 1s,opacity 1s;
+  transition: transform 1s,opacity 1s,-webkit-transform 1s
 }
 .button-about {
   padding: .875rem 2.875rem;
@@ -981,7 +983,7 @@ body {
   flex-direction: column;
   gap: .9375rem
 }
-.interior__item._watcher-view {
+._watcher-view .interior__item {
   -webkit-transform: translate(0,0);
   transform: translate(0,0);
   opacity: 1;
