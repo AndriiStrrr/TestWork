@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20241118204538">
+	<link rel="stylesheet" href="css/style.min.css?_v=20241119185858">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,8 +36,8 @@
 							<li class="menu__item"><a data-goto=".here" href="#" class="menu__link">Home</a></li>
 							<li class="menu__item"><a href="#" class="menu__link">Services</a></li>
 							<li class="menu__item"><a data-goto=".about" href="#" class="menu__link">About us</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Room</a></li>
-							<li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+							<li class="menu__item"><a data-goto=".choice" href="#" class="menu__link">Room</a></li>
+							<li class="menu__item"><a data-goto=".interior" href="#" class="menu__link">Contact</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -164,14 +164,14 @@
 						<div class="here__pictures pictures-here">
 							<div class="pictures-here__content">
 								<div data-watch class="pictures-here__deco deco deco--top">
-									<img class="deco__icon" src="img/stay/icon-2.svg" alt="Image">
+									<img class="deco__icon" data-src="img/stay/icon-2.svg" alt="Image">
 									<div class="deco__content">
 										<h5 class="deco__title">Cody Fisher</h5>
 										<div class="deco__subtitle">give rating <span>4.5</span></div>
 									</div>
 								</div>
 								<div data-watch class="pictures-here__deco deco deco--left">
-									<img class="deco__icon" src="img/stay/icon-1.svg" alt="Image">
+									<img class="deco__icon" data-src="img/stay/icon-1.svg" alt="Image">
 									<div class="deco__content">
 										<h5 class="deco__title">Albert Flores</h5>
 										<div class="deco__subtitle">give rating <span>4.5</span></div>
@@ -186,7 +186,7 @@
 									</div>
 								</div>
 							</div>
-							<img class="pictures-here__backgraund-img" data-src="img/stay/stay-img.webp" alt="Image">
+							<img class="pictures-here__backgraund-img" data-src="img/stay/stay-img.webp" alt="living room">
 						</div>
 					</div>
 				</div>
@@ -201,46 +201,46 @@
 								amet sint. Velit officia consequat.</p>
 						</div>
 					</div>
-					<div data-watch class="choice__items">
-						<div class="choice__item item-choice">
+					<div class="choice__items">
+						<div data-watch class="choice__item item-choice">
 							<a href="#" class="item-choice__link">
-								<img class="item-choice__image" data-src="img/choice/image-1.webp" alt="Image">
+								<img class="item-choice__image" data-src="img/choice/image-1.webp" alt="Room with View">
 							</a>
 							<div class="item-choice__subtitle">3 GUESTS</div>
 							<a href="#" class="item-choice__link-title">
 								Room with View
 							</a>
 						</div>
-						<div class="choice__item item-choice ">
+						<div data-watch class="choice__item item-choice ">
 							<a href="#" class="item-choice__link">
-								<img class="item-choice__image" data-src="img/choice/image-3.webp" alt="Image">
+								<img class="item-choice__image" data-src="img/choice/image-3.webp" alt="Luxury Room">
 							</a>
 							<div class="item-choice__subtitle">6 GUESTS</div>
 							<a href="#" class="item-choice__link-title">
 								Luxury Room
 							</a>
 						</div>
-						<div class="choice__item item-choice">
+						<div data-watch class="choice__item item-choice">
 							<a href="#" class="item-choice__link">
-								<img class="item-choice__image" data-src="img/choice/image-2.webp" alt="Image">
+								<img class="item-choice__image" data-src="img/choice/image-2.webp" alt="Appartment">
 							</a>
 							<div class="item-choice__subtitle">5 GUESTS</div>
 							<a href="#" class="item-choice__link-title">
 								Appartment
 							</a>
 						</div>
-						<div class="choice__item item-choice">
+						<div data-watch class="choice__item item-choice">
 							<a href="#" class="item-choice__link">
-								<img class="item-choice__image" data-src="img/choice/image-4.webp" alt="Image">
+								<img class="item-choice__image" data-src="img/choice/image-4.webp" alt="Small Room">
 							</a>
 							<div class="item-choice__subtitle">1 GUESTS</div>
 							<a href="#" class="item-choice__link-title">
 								Small Room
 							</a>
 						</div>
-						<div class="choice__item item-choice">
+						<div data-watch class="choice__item item-choice">
 							<a href="#" class="item-choice__link">
-								<img class="item-choice__image" data-src="img/choice/image-5.webp" alt="Image">
+								<img class="item-choice__image" data-src="img/choice/image-5.webp" alt="Midium Room">
 							</a>
 							<div class="item-choice__subtitle">4 GUESTS</div>
 							<a href="#" class="item-choice__link-title">
@@ -264,7 +264,7 @@
 						<a data-watch href="#" class="about__button button-about"><span>Explore</span></a>
 					</div>
 					<div class="about__image">
-						<img data-src="img/about/main-img.webp" alt="Image">
+						<img data-src="img/about/main-img.webp" alt="restaurant">
 					</div>
 				</div>
 			</section>
@@ -286,19 +286,19 @@
 						<div class="reviews-interior__bottom">
 							<div class="reviews-interior__links">
 								<a href="#" class="reviews-interior__link">
-									<img src="img/interior/link-img-01.svg" alt="Image">
+									<img data-src="img/interior/link-img-01.svg" alt="Image">
 								</a>
 								<a href="#" class="reviews-interior__link">
-									<img src="img/interior/link-img-02.svg" alt="Image">
+									<img data-src="img/interior/link-img-02.svg" alt="Image">
 								</a>
 								<a href="#" class="reviews-interior__link">
-									<img src="img/interior/link-img-03.svg" alt="Image">
+									<img data-src="img/interior/link-img-03.svg" alt="Image">
 								</a>
 								<a href="#" class="reviews-interior__link">
-									<img src="img/interior/link-img-04.svg" alt="Image">
+									<img data-src="img/interior/link-img-04.svg" alt="Image">
 								</a>
 								<a href="#" class="reviews-interior__link">
-									<img src="img/interior/link-img-05.svg" alt="Image">
+									<img data-src="img/interior/link-img-05.svg" alt="Image">
 								</a>
 							</div>
 							<div class="reviews-interior__text">
@@ -309,7 +309,7 @@
 					</div>
 					<div data-watch class="interior__items">
 						<div data-watch class="interior__item">
-							<img class="interior__icon" src="img/interior/restaurant.svg" alt="Image">
+							<img class="interior__icon" data-src="img/interior/restaurant.svg" alt="Image">
 							<h4 class="interior__title">RESTAURANT</h4>
 							<div class="interior__text">
 								<p>Amet minim mollit non deserunt ullamco est
@@ -317,7 +317,7 @@
 							</div>
 						</div>
 						<div data-watch class="interior__item">
-							<img class="interior__icon" src="img/interior/spa.svg" alt="Image">
+							<img class="interior__icon" data-src="img/interior/spa.svg" alt="Image">
 							<h4 class="interior__title">SPA & WELLNESS</h4>
 							<div class="interior__text">
 								<p>Amet minim mollit non deserunt ullamco est
@@ -428,7 +428,7 @@
 
 		</footer>
 	</div>
-	<script src="js/app.min.js?_v=20241118204538"></script>
+	<script src="js/app.min.js?_v=20241119185858"></script>
 </body>
 
 </html>
